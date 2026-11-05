@@ -25,3 +25,24 @@
     margin-bottom: 0.75rem;
     display: block;
 }
+
+.btn-explorar-catalogo {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: var(--texto-principal);
+    border: 1px solid var(--bordes);
+    border-radius: 4px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-explorar-catalogo:hover {
+    color: var(--morado-principal);
+    border-color: var(--morado-principal);
+    background-color: transparent;
+}
