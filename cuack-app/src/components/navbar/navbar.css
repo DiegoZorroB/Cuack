@@ -9,7 +9,8 @@
   --texto-secundario: #9296A3;
 }
 
-.navbar {
+/* Clases renombradas para evitar conflictos con Bootstrap */
+.cuack-navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -21,12 +22,12 @@
   font-family: sans-serif; 
 }
 
-.navbar.scrolled {
+.cuack-navbar.scrolled {
   background-color: var(--superficie-principal);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.navbar-container {
+.cuack-navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,7 +37,7 @@
   height: 70px;
 }
 
-.navbar-logo {
+.cuack-navbar-logo {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -52,7 +53,7 @@
 }
 
 /* Menú Escritorio */
-.navbar-menu-desktop {
+.cuack-navbar-menu-desktop {
   display: none;
   list-style: none;
   margin: 0;
@@ -60,28 +61,28 @@
   gap: 2rem;
 }
 
-.nav-link {
+.cuack-nav-link {
   background: none;
   border: none;
   color: var(--texto-secundario);
   font-size: 1rem;
   font-weight: 500;
-  font-family: inherit; /* Hereda sans-serif */
+  font-family: inherit; 
   cursor: pointer;
   padding: 1.5rem 0;
   position: relative;
   transition: color 0.2s ease;
 }
 
-.nav-link:hover {
+.cuack-nav-link:hover {
   color: var(--texto-principal);
 }
 
-.nav-link.active {
+.cuack-nav-link.active {
   color: var(--texto-principal);
 }
 
-.nav-link.active::after {
+.cuack-nav-link.active::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -93,7 +94,7 @@
 }
 
 /* Menú Móvil - Hamburguesa */
-.navbar-toggle {
+.cuack-navbar-toggle {
   display: flex;
   background: var(--superficie-principal);
   border: 1px solid var(--bordes);
@@ -103,6 +104,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  padding: 0;
 }
 
 .hamburger-icon {
@@ -120,7 +122,7 @@
 }
 
 /* Menú Móvil Desplegable */
-.navbar-menu-mobile {
+.cuack-navbar-menu-mobile {
   position: fixed;
   top: 0;
   left: 0;
@@ -135,7 +137,7 @@
   flex-direction: column;
 }
 
-.navbar-menu-mobile.open {
+.cuack-navbar-menu-mobile.open {
   transform: translateY(0);
   opacity: 1;
 }
@@ -161,6 +163,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
 }
 
 .mobile-links {
@@ -183,6 +186,7 @@
   text-align: left;
   width: 100%;
   transition: color 0.2s ease;
+  padding: 0;
 }
 
 .mobile-link.active {
@@ -192,15 +196,15 @@
 
 /* Breakpoint para Escritorio */
 @media (min-width: 1024px) {
-  .navbar-toggle {
+  .cuack-navbar-toggle {
     display: none;
   }
   
-  .navbar-menu-desktop {
+  .cuack-navbar-menu-desktop {
     display: flex;
   }
 
-  .navbar-menu-mobile {
+  .cuack-navbar-menu-mobile {
     display: none !important;
   }
 }

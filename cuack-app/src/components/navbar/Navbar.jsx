@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './Navbar.css';
+import './navbar.css';
 import logo from '../../assets/logo.svg';
 
 const Navbar = () => {
@@ -7,7 +7,6 @@ const Navbar = () => {
   const [activeItem, setActiveItem] = useState('Inicio');
   const [scrolled, setScrolled] = useState(false);
 
-  // Detecta cuando el usuario hace scroll para cambiar el fondo
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
@@ -21,20 +20,20 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <div className="navbar-container">
+    <nav className={`cuack-navbar ${scrolled ? 'scrolled' : ''}`}>
+      <div className="cuack-navbar-container">
         
         {/* Logo */}
-        <div className="navbar-logo">
+        <div className="cuack-navbar-logo">
           <img src={logo} alt="Cuack Logo" className="logo-icon" />
           <span className="logo-text">CUACK</span>
         </div>
 
-        {/* Menú de Escritorio (Escrito de forma explícita) */}
-        <ul className="navbar-menu-desktop">
+        {/* Menú de Escritorio */}
+        <ul className="cuack-navbar-menu-desktop">
           <li>
             <button 
-              className={`nav-link ${activeItem === 'Inicio' ? 'active' : ''}`} 
+              className={`cuack-nav-link ${activeItem === 'Inicio' ? 'active' : ''}`} 
               onClick={() => setActiveItem('Inicio')}
             >
               Inicio
@@ -42,7 +41,7 @@ const Navbar = () => {
           </li>
           <li>
             <button 
-              className={`nav-link ${activeItem === 'Categorías' ? 'active' : ''}`} 
+              className={`cuack-nav-link ${activeItem === 'Categorías' ? 'active' : ''}`} 
               onClick={() => setActiveItem('Categorías')}
             >
               Categorías
@@ -50,7 +49,7 @@ const Navbar = () => {
           </li>
           <li>
             <button 
-              className={`nav-link ${activeItem === 'Destacados' ? 'active' : ''}`} 
+              className={`cuack-nav-link ${activeItem === 'Destacados' ? 'active' : ''}`} 
               onClick={() => setActiveItem('Destacados')}
             >
               Destacados
@@ -58,7 +57,7 @@ const Navbar = () => {
           </li>
           <li>
             <button 
-              className={`nav-link ${activeItem === 'Novedades' ? 'active' : ''}`} 
+              className={`cuack-nav-link ${activeItem === 'Novedades' ? 'active' : ''}`} 
               onClick={() => setActiveItem('Novedades')}
             >
               Novedades
@@ -66,7 +65,7 @@ const Navbar = () => {
           </li>
           <li>
             <button 
-              className={`nav-link ${activeItem === 'Favoritos' ? 'active' : ''}`} 
+              className={`cuack-nav-link ${activeItem === 'Favoritos' ? 'active' : ''}`} 
               onClick={() => setActiveItem('Favoritos')}
             >
               Favoritos
@@ -75,7 +74,7 @@ const Navbar = () => {
         </ul>
 
         {/* Botón Menú Hamburguesa (Móvil) */}
-        <button className="navbar-toggle" onClick={() => setIsOpen(!isOpen)}>
+        <button className="cuack-navbar-toggle" onClick={() => setIsOpen(!isOpen)}>
           <div className="hamburger-icon">
             <span></span>
             <span></span>
@@ -85,10 +84,10 @@ const Navbar = () => {
 
       </div>
 
-      {/* Menú Móvil Desplegable (Escrito de forma explícita) */}
-      <div className={`navbar-menu-mobile ${isOpen ? 'open' : ''}`}>
+      {/* Menú Móvil Desplegable */}
+      <div className={`cuack-navbar-menu-mobile ${isOpen ? 'open' : ''}`}>
         <div className="mobile-header">
-          <div className="navbar-logo">
+          <div className="cuack-navbar-logo">
             <img src={logo} alt="Cuack Logo" className="logo-icon" />
             <span className="logo-text">CUACK</span>
           </div>
