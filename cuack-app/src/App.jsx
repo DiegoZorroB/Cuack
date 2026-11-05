@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/hero/Hero";
 import Categorias from "./components/categorias/Categorias";
@@ -11,19 +12,26 @@ import Footer from "./components/footer/Footer";
 
 function App() {
 
-      return(
-        <>
-        <Navbar/>
-        <Hero/>
-        <Categorias/>
-        <Destacados/>
-        <Catalogo/>
-        <Novedades/>
-        <Noticias/>
-        <Favoritos/>
-        <Footer/>
-        </>
-      );
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Hero />
+            <Categorias />
+            <Destacados />
+            <Novedades />
+            <Favoritos />
+          </>
+        }
+        />
+        <Route path="/catalogo" element={<Catalogo />} />
+        <Route path="/noticias" element={<Noticias />} />
+      </Routes>
+      <Footer />
+    </>
+  );
 }
 
 

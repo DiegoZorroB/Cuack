@@ -1,0 +1,15 @@
+
+
+.subtitulo {
+  color: var(--morado-principal);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.cartas{
+    margin-top: 1.5rem;
+}

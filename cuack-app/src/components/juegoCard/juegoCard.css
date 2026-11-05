@@ -1,0 +1,121 @@
+/* Puedes obviar el bloque :root si ya tienes estas variables globales en tu index.css */
+:root {
+  --fondo-tarjetas: #111217;
+  --bordes: #272A32;
+  --texto-principal: #F4F5F7;
+  --texto-secundario: #9296A3;
+  --morado-principal: #B55CFF;
+}
+
+/* Sobrescribir el diseño base de la tarjeta de Bootstrap */
+.cuack-juego-card {
+  background-color: var(--fondo-tarjetas);
+  border: 1px solid var(--bordes);
+  border-radius: 8px;
+  color: var(--texto-principal);
+  font-family: sans-serif;
+  overflow: hidden;
+  
+}
+
+.cuack-card-img {
+  object-fit: cover;
+  height: 220px; 
+  width: 100%;
+  display: block;
+  border-bottom: none; 
+}
+
+/* Botón flotante del corazón */
+.cuack-fav-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: rgba(8, 9, 12, 0.4);
+  backdrop-filter: blur(4px); /* Le da un toque premium estilo cristal */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--texto-principal);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cuack-fav-btn:hover {
+  background-color: rgba(8, 9, 12, 0.8);
+  transform: scale(1.05);
+}
+
+/* Cuerpo de la tarjeta */
+.cuack-card-body {
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem; /* Reducimos el padding superior (0.5rem) */
+  position: relative;
+  z-index: 2; /* Asegura que el texto esté por encima de cualquier capa de la imagen */
+}
+
+.cuack-genero {
+  color: var(--morado-principal);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.cuack-titulo {
+  font-weight: 700;
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  color: var(--texto-principal);
+}
+
+.cuack-descripcion {
+  color: var(--texto-secundario);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.cuack-explorar {
+  color: var(--texto-principal);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.cuack-explorar:hover {
+  color: var(--morado-principal);
+}
+
+
+/* Contenedor de la imagen sin borde inferior duro */
+.cuack-img-container {
+  overflow: hidden; /* Evita que la imagen se salga de los bordes curvos de la tarjeta */
+}
+
+
+/*Gradiente superpuesto */
+.cuack-img-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* El gradiente cubrirá la mitad inferior de la imagen */
+  
+  /* Gradiente */
+  background: linear-gradient(
+    to bottom, 
+    rgba(17, 18, 23, 0) 0%, 
+    rgba(17, 18, 23, 1) 100% 
+  );
+  
+  /* Asegura que el gradiente no bloquee los clics en el botón de favoritos */
+  pointer-events: none; 
+}
