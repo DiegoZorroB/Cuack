@@ -1,15 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
+.contenedor-destacados {
 
-.subtitulo {
-  color: var(--morado-principal);
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  font-weight: 800;
-  text-transform: uppercase;
-  margin-bottom: 0.75rem;
-  display: block;
+    background: linear-gradient(to bottom, #0d0e12, #090a0d);
+    border-top: 1px solid #272A32;
+    border-bottom: 1px solid #272A32;
+    width: 100%;
 }
 
-.cartas{
-    margin-top: 1.5rem;
+.titulo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--texto-principal);
+    margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+    color: var(--morado-principal);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    display: block;
 }

@@ -55,12 +55,13 @@ const juegos = [
 function Destacados() {
 
   return (
-    <section className="container py-5">
+    <section className="contenedor-destacados">
+      <div className="container py-5">
       <span className="subtitulo">Los imprescindibles</span>
-      <h2 className="mb-4">Juegos Destacados</h2>
-      <div className="row">
+      <h2 className="titulo mb-4">Juegos Destacados</h2>
+      <div className="row g-4">
         {juegos.map((juego) => (
-          <div className=" cartas col-sm-4" key={juego.id}>
+          <div className="col-12 col-md-6 col-lg-4 cartas" key={juego.id}>
             <JuegoCard
               genero={juego.genero}
               nombre={juego.nombre}
@@ -69,6 +70,7 @@ function Destacados() {
             />
           </div>
         ))}
+      </div>
       </div>
     </section>);
 
