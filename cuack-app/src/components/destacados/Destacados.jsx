@@ -74,7 +74,7 @@ const juegos = [
 function Destacados() {
 
   return (
-    <section className="contenedor-destacados">
+    <section id='destacados' className="contenedor-destacados">
       <div className="container py-5">
       <span className="subtitulo">Los imprescindibles</span>
       <h2 className="titulo mb-4">Juegos Destacados</h2>

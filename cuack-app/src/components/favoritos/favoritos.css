@@ -1,0 +1,58 @@
+/* Caja del estado vacío */
+.cuack-fav-empty-box {
+  background-color: var(--fondo-tarjetas);
+  border: 1px solid var(--bordes);
+  border-radius: 12px;
+  padding: 4rem 2rem;
+  max-width: 700px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor del ícono */
+.cuack-fav-icon-wrapper {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, rgba(181, 92, 255, 0.1) 0%, rgba(181, 92, 255, 0) 70%);
+}
+
+.cuack-gamepad-icon {
+  width: 80px;
+  height: 80px;
+}
+
+/* Descripción */
+.cuack-fav-desc {
+  color: var(--texto-secundario);
+  font-size: 0.95rem;
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+/* Botón Morado Sólido (diferente al transparente de destacados) */
+.btn-solid-purple {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  background-color: var(--morado-principal);
+  color: white; /* Texto blanco puro */
+  border: none;
+  border-radius: 6px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(181, 92, 255, 0.3); /* Un ligero brillo morado debajo */
+}
+
+.btn-solid-purple:hover {
+  background-color: #c77dff; /* Tu variable --hover-morado */
+  color: white;
+  transform: translateY(-2px); /* Se levanta un poquito al pasar el mouse */
+  box-shadow: 0 6px 20px rgba(181, 92, 255, 0.5);
+}
