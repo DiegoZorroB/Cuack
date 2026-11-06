@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 import logo from '../../assets/logo.svg'; 
 
@@ -21,9 +22,9 @@ const Footer = () => {
           <div className="col-12 col-md-3 mb-5 mb-md-0">
             <h6 className="fw-bold mb-4 text-uppercase text-muted-custom title-spacing">Plataforma</h6>
             <ul className="list-unstyled">
-              <li className="mb-3"><a href="#inicio" className="footer-link">Inicio</a></li>
-              <li className="mb-3"><a href="#juegos" className="footer-link">Juegos</a></li>
-              <li className="mb-3"><a href="#noticias" className="footer-link">Noticias</a></li>
+              <li className="mb-3"><Link to="/" className="footer-link">Inicio</Link></li>
+              <li className="mb-3"><Link to="catalogo" className="footer-link">Juegos</Link></li>
+              <li className="mb-3"><Link to="noticias" className="footer-link">Noticias</Link></li>
             </ul>
           </div>
 
