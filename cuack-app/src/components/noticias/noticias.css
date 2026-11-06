@@ -1,0 +1,96 @@
+.noticias-page {
+  background-color: #060608;
+  min-height: 100vh;
+}
+
+.vertical-line-purple {
+  width: 4px;
+  height: 18px;
+  background-color: #9d4edd;
+  border-radius: 2px;
+}
+
+.link-volver {
+  transition: color 0.3s ease;
+}
+
+.link-volver:hover {
+  color: #9d4edd !important;
+}
+
+
+/* Tarjetas base */
+.noticia-card-horizontal {
+  background-color: #121217; 
+  border-radius: 12px;
+  border: 1px solid transparent; 
+  cursor: pointer;
+  overflow: hidden; /* Evita que la imagen se salga al hacer zoom */
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.noticia-card-horizontal img {
+  transition: transform 0.4s ease;
+}
+
+/* Animación hover: Borde morado, elevación y ZOOM interno */
+.noticia-card-horizontal:hover {
+  transform: translateY(-5px);
+  border-color: #9d4edd;
+}
+
+.noticia-card-horizontal:hover img {
+  transform: scale(1.04);
+}
+
+/* Mantener el texto del título en blanco al hacer hover en Noticias */
+.noticia-card-horizontal:hover h2,
+.noticia-card-horizontal:hover h5 {
+  color: #ffffff !important;
+}
+
+.btn-leer {
+  position: relative;
+  z-index: 5;
+  transition: opacity 0.3s ease;
+}
+
+.btn-leer:hover {
+  opacity: 0.8;
+}
+
+/* Gestión de bordes de imagen responsivos */
+.img-redondeada-principal,
+.img-redondeada-secundaria {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Ajustes para Evitar Imágenes Gigantes en Móvil/Tablet */
+@media (max-width: 991px) {
+  .noticia-card-horizontal.principal .img-col {
+    height: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  .noticia-card-horizontal.secundaria .img-col {
+    height: 200px;
+  }
+}
+
+/* Desktop para noticia principal */
+@media (min-width: 992px) {
+  .img-redondeada-principal {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 12px;
+  }
+}
+
+/* Tablet y Desktop para noticias secundarias */
+@media (min-width: 768px) {
+  .img-redondeada-secundaria {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 12px;
+  }
+}
