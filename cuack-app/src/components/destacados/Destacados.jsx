@@ -14,42 +14,60 @@ const juegos = [
     genero: "Soulslike",
     nombre: "Elden Ring",
     descripcion: "Un juego de rol de acción en un mundo abierto.",
-    imagen: EldenRing
+    imagen: EldenRing,
+    estudio: "FromSoftware",
+    lanzamiento: "25 de febrero de 2022",
+    plataforma: "Steam"
   },
   {
     id: 2,
     genero: "Shooter",
     nombre: "Doom Eternal",
     descripcion: "Un juego de disparos en primera persona lleno de acción.",
-    imagen: DoomEternal
+    imagen: DoomEternal,
+    estudio: "id Software",
+    lanzamiento: "20 de marzo de 2020",
+    plataforma: "Steam"
   },
   {
     id: 3,
     genero: "Cartas",
     nombre: "Yugioh",
     descripcion: "Un juego de cartas coleccionables.",
-    imagen: Yugioh
+    imagen: Yugioh,
+    estudio: "Konami",
+    lanzamiento: "18 de septiembre de 2002",
+    plataforma: "Steam"
   },
   {
     id: 4,
     genero: "Acción y Aventura",
     nombre: "GTA 6",
     descripcion: "Un juego de acción y aventura en un mundo abierto.",
-    imagen: Gta6
+    imagen: Gta6,
+    estudio: "RockstarGames",
+    lanzamiento: "19 de noviembre de 2026",
+    plataforma: "PlayStation"
   },
   {
     id: 5,
     genero: "Supervivencia",
     nombre: "Sons Of the Forest",
     descripcion: "Un juego de supervivencia en un mundo abierto lleno de peligros.",
-    imagen: SonsOfTheForest
+    imagen: SonsOfTheForest,
+    estudio: "Newnight",
+    lanzamiento: "22 de febrero del 2024",
+    plataforma: "Steam"
   },
   {
     id: 6,
     genero: "RPG",
     nombre: "Persona 5 Royal",
     descripcion: "Un juego de rol con una historia envolvente y combates dinámicos.",
-    imagen: P5Royal
+    imagen: P5Royal,
+    estudio: "ATLUS",
+    lanzamiento: "21 de octubre del 2022",
+    plataforma: "Steam"
   }
 ];
 
@@ -68,6 +86,9 @@ function Destacados() {
               nombre={juego.nombre}
               descripcion={juego.descripcion}
               imagen={juego.imagen}
+              estudio={juego.estudio}
+              lanzamiento={juego.lanzamiento}
+              plataforma={juego.plataforma}
             />
           </div>
         ))}
