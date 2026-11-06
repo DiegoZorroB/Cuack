@@ -1,6 +1,8 @@
 .novedades-section {
   background-color: #060608;
   font-family: 'Inter', sans-serif;
+  border-top: 1px solid #272A32;
+  border-bottom: 1px solid #272A32;
 }
 
 .text-muted-custom {

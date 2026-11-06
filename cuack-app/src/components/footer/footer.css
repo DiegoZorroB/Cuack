@@ -1,6 +1,7 @@
 .footer-cuack {
   background-color: #060608; /* Ajustado para ser más oscuro como en Figma */
   font-family: 'Inter', sans-serif;
+  border-top: 1px solid #272A32;
 }
 
 .footer-logo {
