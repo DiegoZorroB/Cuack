@@ -13,7 +13,7 @@ const Noticias = () => {
         <section>
         <div className="mb-5">
           <Link to="/" className="text-muted-custom text-decoration-none d-inline-flex align-items-center mb-4 link-volver">
-            <i className="bi bi-chevron-left me-2">Volver al inicio</i> 
+            <i id='encabezado' className="bi bi-chevron-left me-2">Volver al inicio</i> 
           </Link>
           <div className="d-flex align-items-center mb-2">
             <div className="vertical-line-purple me-2"></div>

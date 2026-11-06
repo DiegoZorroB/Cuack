@@ -18,6 +18,9 @@
   color: #9d4edd !important;
 }
 
+#encabezado {
+  padding-top: 50px;
+}
 
 /* Tarjetas base */
 .noticia-card-horizontal {

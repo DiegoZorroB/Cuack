@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
+import Barra_separador from "./components/barra-separador/barra_separador";
 import Hero from "./components/hero/Hero";
 import Categorias from "./components/categorias/Categorias";
 import Destacados from "./components/destacados/Destacados";
@@ -15,6 +16,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <Barra_separador/>
       <Routes>
         <Route path="/" element={
           <>
