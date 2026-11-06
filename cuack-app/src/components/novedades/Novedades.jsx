@@ -8,7 +8,7 @@ import imgNoticia3 from '../../assets/indie-games.jpg';
 
 const Novedades = () => {
   return (
-    <section className="novedades-section text-light py-5">
+    <section id='novedades' className="novedades-section text-light py-5">
       <div className="container-fluid px-4 px-md-5">
         
         {/* Cabecera de la sección */}

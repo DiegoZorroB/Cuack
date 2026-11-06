@@ -1,9 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import './Footer.css';
 import logo from '../../assets/logo.svg'; 
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Función para manejar el clic en los enlaces del footer de forma inteligente
+  const handleFooterLinkClick = (path, e) => {
+    // Si ya te encuentras exactamente en esa ruta, evitamos la navegación y hacemos scroll arriba
+    if (location.pathname === path) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // Si estás en otra página, permitimos que React Router navegue y además subimos el scroll
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+
   return (
     <footer className="footer-cuack text-light pt-5 pb-4 mt-auto">
       <div className="container-fluid px-4 px-md-5">
@@ -22,9 +38,9 @@ const Footer = () => {
           <div className="col-12 col-md-3 mb-5 mb-md-0">
             <h6 className="fw-bold mb-4 text-uppercase text-muted-custom title-spacing">Plataforma</h6>
             <ul className="list-unstyled">
-              <li className="mb-3"><Link to="/" className="footer-link">Inicio</Link></li>
-              <li className="mb-3"><Link to="catalogo" className="footer-link">Juegos</Link></li>
-              <li className="mb-3"><Link to="noticias" className="footer-link">Noticias</Link></li>
+              <li className="mb-3"><Link to="/" className="footer-link" onClick={(e) => handleFooterLinkClick('/', e)}>Inicio</Link></li>
+              <li className="mb-3"><Link to="catalogo" className="footer-link" onClick={(e) => handleFooterLinkClick('/catalogo', e)}>Juegos</Link></li>
+              <li className="mb-3"><Link to="noticias" className="footer-link" onClick={(e) => handleFooterLinkClick('/noticias', e)}>Noticias</Link></li>
             </ul>
           </div>
 
