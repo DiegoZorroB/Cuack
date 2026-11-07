@@ -1,0 +1,226 @@
+/* SECCIÓN PRINCIPAL */
+.categories-section {
+    background-color: #100d17;
+    color: #ffffff;
+    padding: 55px 0 65px;
+    scroll-margin-top: 70px;
+}
+
+
+/* ENCABEZADO */
+.categories-header {
+    margin-bottom: 32px;
+}
+
+
+/* SUBTÍTULO */
+.categories-subtitle {
+    color: #bd55ff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* TÍTULO PRINCIPAL */
+.categories-title {
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 0;
+    letter-spacing: -1px;
+}
+
+
+/* BOTÓN VER TODOS LOS JUEGOS */
+.btn-all-games {
+    display: inline-block;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #55515e;
+    border-radius: 0;
+    padding: 8px 0;
+    font-size: 13px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+
+.btn-all-games:hover {
+    color: #bd55ff;
+    border-color: #bd55ff;
+}
+
+
+/* ENLACE DE CATEGORÍA */
+.category-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.category-link:focus-visible .category-card {
+    outline: 2px solid #bd55ff;
+    outline-offset: 3px;
+}
+
+
+/* TARJETAS */
+.category-card {
+    width: 100%;
+    height: 155px;
+
+    position: relative;
+    overflow: hidden;
+
+    background-color: #17151d;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: 1px solid #292632;
+    border-radius: 7px;
+
+    padding: 22px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+/* IMÁGENES DE FONDO */
+.category-action {
+    background-image:
+        linear-gradient(
+            to top,
+            rgba(12, 12, 17, 0.98),
+            rgba(12, 12, 17, 0.55)
+        ),
+        url("../../assets/categoria-accion.jpg");
+}
+
+
+.category-adventure {
+    background-image:
+        linear-gradient(
+            to top,
+            rgba(12, 12, 17, 0.98),
+            rgba(12, 12, 17, 0.55)
+        ),
+        url("../../assets/categoria-aventura.jpg");
+}
+
+
+.category-sports {
+    background-image:
+        linear-gradient(
+            to top,
+            rgba(12, 12, 17, 0.98),
+            rgba(12, 12, 17, 0.55)
+        ),
+        url("../../assets/categoria-deportes.jpg");
+}
+
+
+.category-strategy {
+    background-image:
+        linear-gradient(
+            to top,
+            rgba(12, 12, 17, 0.98),
+            rgba(12, 12, 17, 0.55)
+        ),
+        url("../../assets/categoria-estrategia.jpg");
+}
+
+
+/* EFECTO HOVER */
+.category-card:hover {
+    transform: translateY(-5px);
+    border-color: #bd55ff;
+}
+
+
+/* ICONOS */
+.category-icon {
+    color: #bd55ff;
+    font-size: 25px;
+    position: absolute;
+    top: 20px;
+    left: 22px;
+}
+
+
+/* INFORMACIÓN DE LA TARJETA */
+.category-info {
+    position: absolute;
+    bottom: 20px;
+    left: 22px;
+}
+
+
+.category-info h3 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+
+.category-info span {
+    color: #a9a5b3;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+
+/* FLECHA */
+.category-arrow {
+    color: #92909a;
+    font-size: 19px;
+
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    transition: 0.3s ease;
+}
+
+
+.category-card:hover .category-arrow {
+    color: #bd55ff;
+    transform: translateX(4px);
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .categories-section {
+        padding: 40px 0;
+    }
+
+    .categories-title {
+        font-size: 30px;
+    }
+
+    .categories-header {
+        margin-bottom: 25px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .categories-title {
+        font-size: 27px;
+    }
+
+    .category-card {
+        height: 160px;
+    }
+
+}

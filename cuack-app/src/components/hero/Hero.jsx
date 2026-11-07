@@ -1,9 +1,177 @@
-const Hero = () => {
-  return (
-    <section className="hero-container text-light">
-      <h1>Temporal</h1>
-    </section>
-  );
-};
+import { Link } from "react-router-dom";
+import { useFavorites } from "../../context/FavoritesContext";
+import "./hero.css";
+import imgShadowRealms from "../../assets/shadow-realms.jpg";
+import imgDarkKingdom from "../../assets/dark-kingdom.jpg";
+import imgLegendArena from "../../assets/legend-arena.jpg";
+
+function Hero() {
+
+    const { toggleFavorito, esFavorito } = useFavorites();
+
+    // 1. Información de los videojuegos
+    const games = [
+        {
+            id: "hero-shadow-realms",
+            nombre: "Shadow Realms",
+            subtitle: "AVENTURA DEL MES",
+            title: "SHADOW REALMS",
+            description: "Adéntrate en un reino olvidado, donde antiguas fortalezas desafían el paso del tiempo y la niebla oculta secretos ancestrales.",
+            genero: "Aventura",
+            imagen: imgShadowRealms,
+            estudio: "Realm Forge",
+            lanzamiento: "2026",
+            plataforma: "PC",
+            imageClass: "shadow-realms"
+        },
+        {
+            id: "hero-dark-kingdom",
+            nombre: "Dark Kingdom",
+            subtitle: "JUEGO DESTACADO",
+            title: "DARK KINGDOM",
+            description: "Enfréntate a criaturas legendarias, explora tierras misteriosas y descubre los secretos de un reino dominado por la oscuridad.",
+            genero: "RPG",
+            imagen: imgDarkKingdom,
+            estudio: "Black Citadel",
+            lanzamiento: "2026",
+            plataforma: "PC",
+            imageClass: "dark-kingdom"
+        },
+        {
+            id: "hero-legend-arena",
+            nombre: "Legend Arena",
+            subtitle: "NUEVO LANZAMIENTO",
+            title: "LEGEND ARENA",
+            description: "Entra en la arena, demuestra tus habilidades y lucha por alcanzar la gloria en una competencia llena de desafíos.",
+            genero: "Acción",
+            imagen: imgLegendArena,
+            estudio: "Arena Works",
+            lanzamiento: "2026",
+            plataforma: "PC",
+            imageClass: "legend-arena"
+        }
+    ];
+
+    return (
+
+        <section className="hero-section">
+
+            {/* Contenedor principal del carrusel */}
+            <div
+                id="heroCarousel"
+                className="carousel slide"
+                data-bs-ride="carousel"
+                data-bs-interval="5000"
+            >
+
+                {/* 2. Indicadores del carrusel */}
+                <div className="carousel-indicators">
+
+                    {games.map((game, index) => (
+
+                        <button
+                            key={game.id}
+                            type="button"
+                            data-bs-target="#heroCarousel"
+                            data-bs-slide-to={index}
+                            className={index === 0 ? "active" : ""}
+                            aria-label={`Ir a ${game.nombre}`}
+                        />
+
+                    ))}
+
+                </div>
+
+
+                {/* 3. Contenedor de las diapositivas */}
+                <div className="carousel-inner">
+
+                    {games.map((game, index) => (
+
+                        <div
+                            key={game.id}
+                            className={`carousel-item ${index === 0 ? "active" : ""}`}
+                        >
+
+                            {/* 4. Fondo de cada videojuego */}
+                            <div className={`hero-slide ${game.imageClass}`}>
+
+                                <div className="container hero-content">
+
+                                    {/* Subtítulo */}
+                                    <span className="hero-subtitle">
+                                        ━ {game.subtitle}
+                                    </span>
+
+                                    {/* Nombre del videojuego */}
+                                    <h1 className="hero-title">
+                                        {game.title}
+                                    </h1>
+
+                                    {/* Descripción */}
+                                    <p className="hero-description">
+                                        {game.description}
+                                    </p>
+
+                                    {/* Botones */}
+                                    <div className="d-flex flex-wrap gap-3">
+
+                                        <Link to="/catalogo" className="btn btn-hero-details">
+                                            Ver detalles →
+                                        </Link>
+
+                                        <button
+                                            type="button"
+                                            className={`btn btn-hero-favorite ${esFavorito(game.id) ? "active" : ""}`}
+                                            onClick={() => toggleFavorito(game)}
+                                            aria-pressed={esFavorito(game.id)}
+                                        >
+                                            {esFavorito(game.id)
+                                                ? "♥ Quitar de favoritos"
+                                                : "♡ Añadir a favoritos"}
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    ))}
+
+                </div>
+
+
+                {/* 5. Botón para regresar */}
+                <button
+                    className="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#heroCarousel"
+                    data-bs-slide="prev"
+                    aria-label="Videojuego anterior"
+                >
+                    <span className="carousel-control-prev-icon" />
+                </button>
+
+
+                {/* 6. Botón para avanzar */}
+                <button
+                    className="carousel-control-next"
+                    type="button"
+                    data-bs-target="#heroCarousel"
+                    data-bs-slide="next"
+                    aria-label="Siguiente videojuego"
+                >
+                    <span className="carousel-control-next-icon" />
+                </button>
+
+            </div>
+
+        </section>
+
+    );
+}
 
 export default Hero;

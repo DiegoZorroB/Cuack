@@ -1,0 +1,209 @@
+/* SECCIÓN PRINCIPAL */
+.hero-section {
+    width: 100%;
+    background-color: #08080c;
+    color: white;
+}
+
+
+/* DIAPOSITIVAS */
+.hero-slide {
+    width: 100%;
+    min-height: 475px;
+
+    display: flex;
+    align-items: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+
+/* IMAGEN SHADOW REALMS */
+.shadow-realms {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(8, 8, 12, 0.98) 0%,
+            rgba(8, 8, 12, 0.65) 45%,
+            rgba(8, 8, 12, 0.15) 100%
+        ),
+        url("../../assets/shadow-realms.jpg");
+}
+
+
+/* IMAGEN DARK KINGDOM */
+.dark-kingdom {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(8, 8, 12, 0.98) 0%,
+            rgba(8, 8, 12, 0.65) 45%,
+            rgba(8, 8, 12, 0.15) 100%
+        ),
+        url("../../assets/dark-kingdom.jpg");
+}
+
+
+/* IMAGEN LEGEND ARENA */
+.legend-arena {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(8, 8, 12, 0.98) 0%,
+            rgba(8, 8, 12, 0.65) 45%,
+            rgba(8, 8, 12, 0.15) 100%
+        ),
+        url("../../assets/legend-arena.jpg");
+}
+
+
+/* CONTENIDO */
+.hero-content {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 5%;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* SUBTÍTULO */
+.hero-subtitle {
+    color: #bd55ff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+
+/* TÍTULO */
+.hero-title {
+    color: white;
+    font-size: clamp(42px, 6vw, 68px);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+
+/* DESCRIPCIÓN */
+.hero-description {
+    max-width: 600px;
+    color: #d0d0d0;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+
+/* BOTÓN VER DETALLES */
+.btn-hero-details {
+    display: inline-flex;
+    align-items: center;
+    background-color: #b34cff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.btn-hero-details:hover {
+    background-color: #9634e0;
+    color: white;
+}
+
+
+/* BOTÓN FAVORITOS */
+.btn-hero-favorite {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #777;
+    border-radius: 5px;
+    padding: 15px 22px;
+}
+
+
+.btn-hero-favorite:hover {
+    border-color: #bd55ff;
+    color: #bd55ff;
+}
+
+
+.btn-hero-favorite.active {
+    border-color: #bd55ff;
+    color: #bd55ff;
+    background-color: rgba(189, 85, 255, 0.12);
+}
+
+
+.btn-hero-details:focus-visible,
+.btn-hero-favorite:focus-visible {
+    outline: 2px solid #bd55ff;
+    outline-offset: 3px;
+}
+
+
+/* INDICADORES */
+.hero-section .carousel-indicators {
+    margin-bottom: 20px;
+}
+
+
+.hero-section .carousel-indicators button {
+    background-color: #bd55ff;
+    height: 4px;
+    border: none;
+}
+
+
+/* FLECHAS */
+.hero-section .carousel-control-prev,
+.hero-section .carousel-control-next {
+    width: 8%;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .hero-slide {
+        min-height: 450px;
+        background-position: center;
+    }
+
+    .hero-content {
+        padding: 55px 8%;
+    }
+
+    .hero-title {
+        font-size: 42px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .hero-title {
+        font-size: 35px;
+    }
+
+    .hero-content {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+}
