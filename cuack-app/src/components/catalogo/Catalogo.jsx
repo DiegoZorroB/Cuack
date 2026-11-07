@@ -73,6 +73,8 @@ const juegosCatalogo = [
   }
 ];
 
+var cantidadJuegos = juegosCatalogo.length;
+
 function Catalogo() {
   // Estado para controlar qué categoría está seleccionada
   const [filtroActivo, setFiltroActivo] = useState('Todos');
@@ -125,7 +127,7 @@ function Catalogo() {
 
           {/* Estadísticas */}
           <div className="catalogo-stats text-start text-md-end">
-            <span className="stats-number d-block">12 JUEGOS</span>
+            <span className="stats-number d-block">{cantidadJuegos} JUEGOS</span>
             <span className="stats-text">Actualizado semanalmente</span>
           </div>
         </div>

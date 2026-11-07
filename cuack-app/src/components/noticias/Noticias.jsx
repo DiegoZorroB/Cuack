@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './noticias.css';
-import imgPrincipal from '../../assets/shadow-realms.jpg';
+import imgPrincipal from '../../assets/shadow-realms.png';
 import imgCard1 from '../../assets/project-zero.jpg';
 import imgCard2 from '../../assets/cloud-gaming.jpg';
 import imgCard3 from '../../assets/noticia1.jpeg';

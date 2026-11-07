@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './novedades.css';
 // Usa tus rutas reales o imágenes de prueba (placeholders)
-import imgPrincipal from '../../assets/shadow-realms.jpg';
+import imgPrincipal from '../../assets/shadow-realms.png';
 import imgNoticia1 from '../../assets/project-zero.jpg';
 import imgNoticia2 from '../../assets/cloud-gaming.jpg';
 import imgNoticia3 from '../../assets/indie-games.jpg';
