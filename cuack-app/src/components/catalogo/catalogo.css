@@ -1,0 +1,95 @@
+/* hero*/
+.catalogo-hero {
+  border-bottom: 1px solid transparent;
+  overflow: hidden; 
+    
+}
+
+/* El resplandor difuminado de la parte superior derecha */
+.catalogo-glow {
+  position: absolute;
+  top: -150px;
+  right: -10%;
+  width: 60%;
+  height: 400px;
+  background: radial-gradient(circle, rgba(181, 92, 255, 0.15) 0%, rgba(181, 92, 255, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.catalogo-link-volver {
+  color: var(--texto-secundario);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.catalogo-link-volver:hover {
+  color: var(--texto-principal);
+}
+
+.catalogo-titulo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3.5rem;
+  color: var(--texto-principal);
+  letter-spacing: -0.5px;
+}
+
+.catalogo-desc {
+  color: var(--texto-secundario);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* filtros*/
+/* Ocultar barra de scroll en los filtros para vista móvil */
+.catalogo-filtros::-webkit-scrollbar {
+  display: none;
+}
+
+.btn-filtro {
+  background-color: transparent;
+  color: var(--texto-secundario);
+  border: 1px solid var(--bordes);
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-filtro:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--texto-principal);
+}
+
+/* Estilo para el filtro seleccionado */
+.btn-filtro.active {
+  background-color: rgba(181, 92, 255, 0.1);
+  border-color: var(--morado-principal);
+  color: var(--texto-principal);
+}
+
+/* estadisticas*/
+.stats-number {
+  color: var(--morado-principal);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.1rem;
+}
+
+.stats-text {
+  color: var(--texto-secundario);
+  font-size: 0.7rem;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .catalogo-titulo {
+    font-size: 2.5rem;
+  }
+}
