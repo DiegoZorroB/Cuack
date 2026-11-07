@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
 import JuegoCard from "../juegoCard/JuegoCard";
 import "./favoritos.css";
+import { useFavorites } from "../../context/FavoritesContext";
 
 function Favoritos() {
-  const juegosFavoritos = [];
+  const {favoritos} = useFavorites();
 
   return (
     <section id='favoritos' className="w-100 py-5" style={{ backgroundColor: 'var(--fondo-principal)' }}>
       <div className="container">
         
-        {juegosFavoritos.length === 0 ? (
+        {favoritos.length === 0 ? (
           /* En vacio */
           <div className="cuack-fav-empty-box d-flex flex-column align-items-center justify-content-center text-center mx-auto">
             
@@ -45,9 +46,10 @@ function Favoritos() {
             <h2 className="text-white fw-bold mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Tus Favoritos</h2>
             
             <div className="row g-4 mb-5">
-              {juegosFavoritos.map((juego) => (
+              {favoritos.map((juego) => (
                 <div className="col-12 col-md-6 col-lg-4" key={juego.id}>
                   <JuegoCard
+                    id={juego.id}
                     genero={juego.genero}
                     nombre={juego.nombre}
                     descripcion={juego.descripcion}

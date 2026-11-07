@@ -1,10 +1,15 @@
 import { useState } from "react";
-import { createPortal } from "react-dom"; // 1. Importamos createPortal
+import { createPortal } from "react-dom";
+import { useFavorites } from "../../context/FavoritesContext";
 import "./juegoCard.css";
 
-function JuegoCard({ genero, nombre, descripcion, imagen, estudio, lanzamiento, plataforma }) {
-  const [favorito, setFavorito] = useState(false);
+function JuegoCard({ id, genero, nombre, descripcion, imagen, estudio, lanzamiento, plataforma }) {
   const [showModal, setShowModal] = useState(false);
+  //funciones del contexto global
+  const {toggleFavorito, esFavorito} = useFavorites();
+  //almancenamos el resultado de la funcion global del contexto en la variable para saber si el juego ya esta en favoritos por su id
+  const isFav = esFavorito(id);
+  const juegoActual = {id, genero, nombre, descripcion, imagen, estudio, lanzamiento, plataforma};
 
   return (
     <>
@@ -14,11 +19,11 @@ function JuegoCard({ genero, nombre, descripcion, imagen, estudio, lanzamiento, 
           <div className="cuack-img-gradient"></div>
           
           <button 
-            className={`cuack-fav-btn ${favorito ? 'active' : ''}`} 
-            onClick={() => setFavorito(!favorito)}
-            aria-label={favorito ? 'Quitar de favoritos' : 'Agregar a favoritos'}
+            className={`cuack-fav-btn ${isFav ? 'active' : ''}`} 
+            onClick={() => toggleFavorito(juegoActual)}
+            aria-label={isFav ? 'Quitar de favoritos' : 'Agregar a favoritos'}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill={favorito ? "var(--morado-principal)" : "none"} stroke={favorito ? "var(--morado-principal)" : "currentColor"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill={isFav ? "var(--morado-principal)" : "none"} stroke={isFav ? "var(--morado-principal)" : "currentColor"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
             </svg>
           </button>

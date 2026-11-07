@@ -82,6 +82,7 @@ function Destacados() {
         {juegos.map((juego) => (
           <div className="col-12 col-md-6 col-lg-4 cartas" key={juego.id}>
             <JuegoCard
+              id={juego.id}
               genero={juego.genero}
               nombre={juego.nombre}
               descripcion={juego.descripcion}
