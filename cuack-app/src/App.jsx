@@ -8,6 +8,7 @@ import Catalogo from "./components/catalogo/Catalogo";
 import Novedades from "./components/novedades/Novedades";
 import Noticias from "./components/noticias/Noticias";
 import Favoritos from "./components/favoritos/Favoritos";
+import MisFavoritos from "./components/misFavoritos/MisFavoritos";
 import Footer from "./components/footer/Footer";
 
 
@@ -30,6 +31,7 @@ function App() {
         />
         <Route path="/catalogo" element={<Catalogo />} />
         <Route path="/noticias" element={<Noticias />} />
+        <Route path="/misFavoritos" element={<MisFavoritos />}/>
       </Routes>
       <Footer />
     </>
